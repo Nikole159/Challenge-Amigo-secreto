@@ -160,3 +160,25 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+.button-reset {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: #ff4d4d; /* Color rojo para diferenciarlo */
+    font-size: 16px;
+    margin-top: 10px; /* Espacio entre los botones */
+}
+
+.button-reset img {
+    width: 30px; /* Tamaño del ícono */
+    height: 30px; /* Tamaño del ícono */
+    object-fit: contain; /* Ajuste de la imagen */
+    margin-right: 40px; /* Espacio entre el ícono y el texto */
+}
+
+.button-reset:hover {
+    background-color: #cc0000; /* Color rojo más oscuro al pasar el mouse */
+}

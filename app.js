@@ -27,7 +27,7 @@ function renderizarAmigos() {
 }
 
 function sortearAmigo(){
-    if (amigo,length === 0){
+    if (amigo.length === 0){
         alert("No hay amigos para sortear");
     }
     let amigoSorteado = amigo[Math.floor(Math.random()*amigo.length)];
@@ -36,4 +36,11 @@ function sortearAmigo(){
 
     let limpiarLista = document.getElementById("listaAmigos");
     limpiarLista.innerHTML = "";
+}
+
+function limpiarLista() {
+  amigo = []; // Vacía el array de amigos
+  renderizarAmigos(); // Actualiza la lista visual
+  let resultado = document.getElementById("resultado");
+  resultado.innerHTML = ""; // Limpia el resultado del sorteo anterior
 }
