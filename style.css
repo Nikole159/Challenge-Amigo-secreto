@@ -182,3 +182,17 @@ ul {
 .button-reset:hover {
     background-color: #cc0000; /* Color rojo más oscuro al pasar el mouse */
 }
+
+.button-eliminar {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-eliminar:hover {
+    background-color: #cc0000;
+}

@@ -16,14 +16,29 @@ function agregarAmigo() {
 }
 
 function renderizarAmigos() {
-    let listaAmigos = document.getElementById("listaAmigos");
-    listaAmigos.innerHTML = "";
+  let listaAmigos = document.getElementById("listaAmigos");
+  listaAmigos.innerHTML = ""; // Limpia la lista antes de renderizar
 
-    for(let i = 0; i < amigo.length; i++){
-        let item = document.createElement("li");
-        item.textContent = amigo[i];
-        listaAmigos.appendChild(item);
-    }
+  for (let i = 0; i < amigo.length; i++) {
+      let item = document.createElement("li");
+      item.textContent = amigo[i];
+
+      // Botón para eliminar el nombre
+      let botonEliminar = document.createElement("button");
+      botonEliminar.textContent = "x";
+      botonEliminar.classList.add("button-eliminar");
+      botonEliminar.onclick = function () {
+          eliminarAmigo(i); // Llama a la función para eliminar el nombre
+      };
+
+      item.appendChild(botonEliminar); // Agrega el botón al elemento de la lista
+      listaAmigos.appendChild(item); // Agrega el elemento a la lista
+  }
+}
+
+function eliminarAmigo(index) {
+  amigo.splice(index, 1); // Elimina el nombre del array
+  renderizarAmigos(); // Vuelve a renderizar la lista
 }
 
 function sortearAmigo(){
